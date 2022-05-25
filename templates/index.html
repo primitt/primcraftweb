@@ -52,7 +52,26 @@
                         <span class="icons">
                             <i class="fas fa-users"></i>
                         </span>
-                        <span>Players:</span>
+                        <span>Players: <strong id="playercount"></strong></span>
+                        <script>
+                            const ws = new WebSocket("wss://mc.primitt.dev/survival")
+                            ws.onopen = function (e){
+                                ws.send("Accept: MOTD")
+                            }
+                            ws.onmessage = function (e){
+                                var playercount = document.getElementById("playercount")
+                                var data = JSON.parse(e.data)
+                                try{
+                                  playercount.innerHTML = data["data"]["online"] + "/" + "70"
+                                }
+                                catch{
+                                  console.log("Unable to parse")
+                                }
+                            }
+                            ws.onclose = function(e){
+                                ws.OPEN()
+                            }
+                        </script> 
                     </div>
                 </div>
             </div>
