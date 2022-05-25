@@ -41,25 +41,46 @@
   </nav>
 </header>
 <body>
-  <section class="backcolor">
-    <div class="text">
-      <div class="container">
-        <br />
-        <div class="box box-color">
-          <p class="title text has-text-centered">
-            <strong>PrimCraft Factions</strong>
-          </p>
-          <p class="subtitle text has-text-centered">
-            The first ever factions server on eaglercraft!
-          </p>
-          <br />
-          <br />
-          <div class="subtitle text is-4">
-            <span class="icons">
-              <i class="fas fa-users"></i>
-            </span>
-            <span>Players:</span>
-          </div>
+    <section class="has-background-black">
+        <div class="has-text-white">
+            <div class="container">
+            <br>
+                <div class="box box-color">
+                    <p class="title has-text-white has-text-centered">
+                        <strong>PrimCraft Factions</strong>
+                    </p>
+                    <p class="subtitle has-text-white has-text-centered">
+                        The first ever factions server on eaglercraft!
+                    </p>
+                    <br>
+                    <br>
+                    <div class="subtitle has-text-white is-4">
+                        <span class="icons">
+                            <i class="fas fa-users"></i>
+                        </span>
+                        <span>Players: <strong class="text" id="playercount">Loading..</strong></span>
+                        <script>
+                            const ws = new WebSocket("wss://mc.primitt.dev/survival")
+                            ws.onopen = function (e){
+                                ws.send("Accept: MOTD")
+                            }
+                            ws.onmessage = function (e){
+                                var playercount = document.getElementById("playercount")
+                                var data = JSON.parse(e.data)
+                                try{
+                                  playercount.innerHTML = data["data"]["online"] + "/" + "70"
+                                }
+                                catch{
+                                  console.log("Unable to parse")
+                                }
+                            }
+                            ws.onclose = function(e){
+                                ws.OPEN()
+                            }
+                        </script> 
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
