@@ -1,131 +1,140 @@
 <!-- import bulma + jquery -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script
+  defer
+  src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+></script>
 
 <style>
-    .btn-color {
-        background-color: #5f5f5f;
-    }
-    .box-color {
-        background-color: #6a6a6a;
-    }
-    .back-sugar {
-        background-image: url("./blur_sugarcane_small.png");
-    }
-    .hr1{
-        width: 20%;
-        background-color: #5f5f5f;
-    }
+  .btn-color {
+    background-color: #5f5f5f;
+  }
+  .box-color {
+    background-color: #30364D;
+  }
+  .back-sugar {
+    background-image: url("./blur_sugarcane_small.png");
+  }
+  .hr1 {
+    width: 20%;
+    background-color: #5f5f5f;
+  }
+  .backcolor{
+    background-color: #1F253B;
+  }
+  .text{
+      color: #ffffff;
+  }
 </style>
-<header class="btn-color">
-    <nav class="level-right">
-        <div style="margin-right:10px; margin-top:10px; margin-bottom:10px">
-            <button class="button btn-color is-outlined is-rounded" id="btn-add">
-                <span class="icon">
-                </span>
-                <span class="has-text-white">PrimCraft</span>
-            </button>
-            <button class="button btn-color is-outlined is-rounded" id="btn-add">
-                <span class="icon">
-                </span>
-                <span class="has-text-white">Asspixel</span>
-            </button>
-        </div>
-    </nav>
+<header class="">
+  <nav class="navbar box-color" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <p class="navbar-item text">PrimCraft</p>
+        <a class="navbar-item text"> Home </a>
+        <a class="navbar-item text"> Recipie </a>
+    </div>
+  </nav>
 </header>
 <body>
-    <section class="has-background-black">
-        <div class="has-text-white">
-            <div class="container">
-            <br>
-                <div class="box box-color">
-                    <p class="title has-text-white has-text-centered">
-                        <strong>PrimCraft Factions</strong>
-                    </p>
-                    <p class="subtitle has-text-white has-text-centered">
-                        The first ever factions server on eaglercraft!
-                    </p>
-                    <br>
-                    <br>
-                    <div class="subtitle has-text-white is-4">
-                        <span class="icons">
-                            <i class="fas fa-users"></i>
-                        </span>
-                        <span>Players:</span>
-                    </div>
-                </div>
-            </div>
+  <section class="backcolor">
+    <div class="text">
+      <div class="container">
+        <br />
+        <div class="box box-color">
+          <p class="title text has-text-centered">
+            <strong>PrimCraft Factions</strong>
+          </p>
+          <p class="subtitle text has-text-centered">
+            The first ever factions server on eaglercraft!
+          </p>
+          <br />
+          <br />
+          <div class="subtitle text is-4">
+            <span class="icons">
+              <i class="fas fa-users"></i>
+            </span>
+            <span>Players:</span>
+          </div>
         </div>
-        <br>
-        <br>
-        <div class="columns" style="padding:20px;">
-            <div class="column is-one-third">
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="columns">
+      <div class="column is-one-third"></div>
+      <div class="column is-one-third">
+        <div class="has-text-centered is-centered">
+          <div class="is-size-3 text has-text-centered">
+            <strong class="text is-size-2">Comming</strong> Soon!
+            <hr />
+          </div>
+        </div>
+        <article class="panel text box-color">
+          <a class="text panel-block text">
+            <span class="panel-icon text">
+              <i class="fas fa-book"></i>
+            </span>
+            Some Comming Soon Item Here!
+          </a>
+          <a class="panel-block text">
+            <span class="panel-icon text">
+              <i class="fas fa-book"></i>
+            </span>
+            This website is the best website!
+          </a>
+        </article>
+      </div>
+      <div class="column is-one-third"></div>
+      <!--<div clas
+            s="column is-one-third">
                 <div class="has-text-centered is-centered">
-                    <div class="is-size-3 has-text-white has-text-centered">
-                        <strong class="has-text-white is-size-2">Comming</strong> Soon!
-                        <hr>
-                    </div>
-                </div>
-                <article class="panel has-text-white box-color">
-                    <a class="has-text-white panel-block has-text-white">
-                        <span class="panel-icon has-text-white">
-                        <i class="fas fa-book"></i>
-                        </span>
-                        Some Comming Soon Item Here!
-                    </a>
-                    <a class="panel-block has-text-white">
-                        <span class="panel-icon has-text-white">
-                            <i class="fas fa-book"></i>
-                        </span>
-                        This website is the best website!
-                    </a>
-                </article>
-            </div>
-            <div class="column is-one-third">
-                <div class="has-text-centered is-centered">
-                    <div class="is-size-3 has-text-white has-text-centered">
+                    <div class="is-size-3 text has-text-centered">
                         Something will be here....
                         <hr>
                     </div>
                 </div>
-                <article class="panel has-text-white box-color">
-                    <a class="has-text-white panel-block has-text-white">
-                        <span class="panel-icon has-text-white">
+                <article class="panel text box-color">
+                    <a class="text panel-block text">
+                        <span class="panel-icon text">
                         <i class="fas fa-book"></i>
                         </span>
                         Something here??? Possibily??? (idk, bongo u decide whats here)
                     </a>
-                    <a class="panel-block has-text-white">
-                        <span class="panel-icon has-text-white">
+                    <a class="panel-block text">
+                        <span class="panel-icon text">
                             <i class="fas fa-book"></i>
                         </span>
                         This website is the best website!
                     </a>
                 </article>
-            </div>
-            <div class="column is-one-third">
+            </div>-->
+      <!--<div class="column is-one-third">
                 <div class="has-text-centered is-centered">
-                    <div class="is-size-3 has-text-white has-text-centered">
+                    <div class="is-size-3 text has-text-centered">
                         weeeeeeeeeeeeeeeeee
                         <hr>
                     </div>
                 </div>
-                <article class="panel has-text-white box-color">
-                    <a class="has-text-white panel-block has-text-white">
-                        <span class="panel-icon has-text-white">
+                <article class="panel text box-color">
+                    <a class="text panel-block text">
+                        <span class="panel-icon text">
                         <i class="fas fa-book"></i>
                         </span>
                             I love a
                     </a>
-                    <a class="panel-block has-text-white">
-                        <span class="panel-icon has-text-white">
+                    <a class="panel-block text">
+                        <span class="panel-icon text">
                             <i class="fas fa-book"></i>
                         </span>
                         This website is the best website!
                     </a>
                 </article>
-            </div>
-        </div>
-    </section>
+            </div>-->
+    </div>
+  </section>
 </body>
