@@ -27,7 +27,7 @@
     background-color: #1F253B;
   }
   .text{
-      color: #ffffff;
+      color: #ffd058;
   }
 </style>
 <header class="">
@@ -35,30 +35,28 @@
     <div class="navbar-menu">
       <div class="navbar-start">
         <p class="navbar-item text">PrimCraft</p>
-        <a class="navbar-item text"> Home </a>
-        <a class="navbar-item text"> Recipie </a>
+        <a href="/" class="navbar-item text"> Home </a>
     </div>
-  </nav>
 </header>
 <body>
-    <section class="has-background-black">
-        <div class="has-text-white">
+    <section class="backcolor">
+        <div class="text">
             <div class="container">
             <br>
                 <div class="box box-color">
-                    <p class="title has-text-white has-text-centered">
+                    <p class="title text has-text-centered">
                         <strong>PrimCraft Factions</strong>
                     </p>
-                    <p class="subtitle has-text-white has-text-centered">
+                    <p class="subtitle text has-text-centered">
                         The first ever factions server on eaglercraft!
                     </p>
                     <br>
                     <br>
-                    <div class="subtitle has-text-white is-4">
+                    <div class="subtitle text is-4">
                         <span class="icons">
                             <i class="fas fa-users"></i>
                         </span>
-                        <span>Players: <strong class="text" id="playercount">Loading..</strong></span>
+                        <span class="text">Players: <b class="text" id="playercount">Loading..</b></span>
                         <script>
                             const ws = new WebSocket("wss://mc.primitt.dev/survival")
                             ws.onopen = function (e){
@@ -86,6 +84,65 @@
     </div>
     <br />
     <br />
+    <div>
+      <div class="columns">
+                    <div class="column is-one-third">
+                    </div>
+                    <div class="column is-one-third">
+                      <h1 class="title text has-text-centered">
+                        Features
+                      </h1>
+                      <hr />
+                      <nav class="tabs is-boxed box-color is-fullwidth">
+                    <div class="container">
+                      <ul>
+                        <li class="tab is-active text" onclick="openTab(event,'Skill')"><a >Skill Leveling</a></li>
+                        <li class="tab text" onclick="openTab(event,'Factions')"><a >Factions</a></li>
+                        <li class="tab text" onclick="openTab(event,'Money')"><a class="text">Economy</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                <br>
+                <div class="container box box-color">
+                    <div id="Skill" class="content-tab text" >
+                      <p>Its about drive, its about flameee</p>
+                        </div>
+                    <div id="Factions" class="content-tab text" style="display:none">
+                        <p>
+                          test2<br>
+                        Details Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <div id="Money" class="content-tab text" style="display:none">
+                      <p>
+                        test3 <br>  
+                      Specification Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <div class="column is-one-third">
+                </div>
+
+
+              <script>function openTab(evt, tabName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("content-tab");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " is-active";
+  }</script>
+            </div>
+        </div>
+      </div>
+       <div class="column is-one-third">
+      </div>
+    </div>
     <div class="columns">
       <div class="column is-one-third"></div>
       <div class="column is-one-third">
@@ -111,6 +168,8 @@
         </article>
       </div>
       <div class="column is-one-third"></div>
+      <br>
+      <br>
       <!--<div clas
             s="column is-one-third">
                 <div class="has-text-centered is-centered">
